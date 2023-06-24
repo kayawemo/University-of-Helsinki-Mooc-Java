@@ -3,7 +3,7 @@ public class MainProgram {
 
     public static void main(String[] args) {
         // test your class here
-<<<<<<< HEAD
+
 
         Money a = new Money(10, 0);
         Money b = new Money(5, 0);
@@ -20,7 +20,6 @@ public class MainProgram {
         System.out.println(a);  // 25.00e
         System.out.println(b);  // 5.00e
         System.out.println(c);  // 15.00e
-=======
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
+
     }
 }

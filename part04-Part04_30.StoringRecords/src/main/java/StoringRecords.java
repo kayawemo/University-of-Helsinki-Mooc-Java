@@ -25,7 +25,7 @@ public class StoringRecords {
 
         // Write here the code for reading from file
         // and printing the read records
-<<<<<<< HEAD
+
         // we create a scanner for reading the file
         try ( Scanner scanner = new Scanner(Paths.get(file))) {
 
@@ -41,8 +41,7 @@ public class StoringRecords {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
-=======
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
+
         return persons;
 
     }

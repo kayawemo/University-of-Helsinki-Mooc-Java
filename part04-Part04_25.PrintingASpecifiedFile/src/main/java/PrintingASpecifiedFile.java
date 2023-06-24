@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PrintingASpecifiedFile {
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         Scanner sc = new Scanner(System.in);
         System.out.println("Which file should have its content printed?");
         String inputFile = sc.nextLine();
@@ -21,6 +22,9 @@ public class PrintingASpecifiedFile {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+=======
+        Scanner scanner = new Scanner(System.in);
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

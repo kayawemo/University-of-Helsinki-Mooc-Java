@@ -6,6 +6,7 @@ public class MainProgram {
         
         // Here you can write code to test that PaymentCard works as intended
         // be sure to erase the extra code for the last part of the exercise!
+<<<<<<< HEAD
         PaymentCard paulsCard = new PaymentCard(20);
         PaymentCard mattsCard = new PaymentCard(30);
         
@@ -35,6 +36,8 @@ public class MainProgram {
         
         
         
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

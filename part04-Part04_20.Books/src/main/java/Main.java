@@ -7,6 +7,7 @@ public class Main {
         
         // implement here the program that allows the user to enter 
         // book information and to examine them
+<<<<<<< HEAD
         
         ArrayList<Book> books = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
@@ -38,6 +39,8 @@ public class Main {
                 System.out.println(book.getTitle());
             }
         }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

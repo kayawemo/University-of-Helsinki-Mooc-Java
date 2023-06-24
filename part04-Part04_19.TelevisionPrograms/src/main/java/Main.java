@@ -8,6 +8,7 @@ public class Main {
 
         ArrayList<TelevisionProgram> programs = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+<<<<<<< HEAD
         
         //read input
         while(true){
@@ -32,6 +33,8 @@ public class Main {
                 System.out.println(program);
             }
         }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

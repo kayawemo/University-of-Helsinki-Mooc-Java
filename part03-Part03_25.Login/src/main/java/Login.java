@@ -5,6 +5,7 @@ public class Login {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+<<<<<<< HEAD
         
         String alexUsername = "alex";
         String alexPassword = "sunshine";
@@ -25,6 +26,8 @@ public class Login {
        
         
         
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

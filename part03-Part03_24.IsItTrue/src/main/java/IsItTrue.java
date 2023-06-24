@@ -5,6 +5,7 @@ public class IsItTrue {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+<<<<<<< HEAD
         
         System.out.println("Give a string:");
         String input = scanner.nextLine();
@@ -14,6 +15,8 @@ public class IsItTrue {
         }else{
             System.out.println("Try again!");
         }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

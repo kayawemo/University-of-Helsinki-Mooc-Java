@@ -9,6 +9,7 @@ public class PersonalInformationCollection {
 
         ArrayList<PersonalInformation> infoCollection = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+<<<<<<< HEAD
         
         while(true){
             System.out.println("First Name: ");
@@ -33,6 +34,8 @@ public class PersonalInformationCollection {
         for(PersonalInformation info:infoCollection){
             System.out.println(info.getFirstName() + " " + info.getLastName());
         }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

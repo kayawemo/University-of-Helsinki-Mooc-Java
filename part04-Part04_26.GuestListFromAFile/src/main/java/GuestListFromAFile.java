@@ -13,6 +13,7 @@ public class GuestListFromAFile {
 
         ArrayList<String> list = new ArrayList<>();
         // implement reading the file here.
+<<<<<<< HEAD
 
         try ( Scanner scanner2 = new Scanner(Paths.get(file))) {
 
@@ -24,6 +25,8 @@ public class GuestListFromAFile {
             System.out.println("Error: " + e.getMessage());
         }
 
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
         System.out.println("");
 
         System.out.println("Enter names, an empty line quits.");

@@ -7,6 +7,9 @@ public class MainProgram {
         counter.printValue();
         counter.decrement();
         counter.decrement();
+<<<<<<< HEAD
         counter.printValue();
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
     }
 }

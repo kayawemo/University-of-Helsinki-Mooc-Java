@@ -9,6 +9,7 @@ public class Items {
 
         ArrayList<Item> items = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
+<<<<<<< HEAD
         
         while(true){
             System.out.println("Name:");
@@ -23,6 +24,8 @@ public class Items {
         for (Item item:items){
             System.out.println(item);
         }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

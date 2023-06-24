@@ -7,6 +7,7 @@ public class RecordsFromAFile {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+<<<<<<< HEAD
         System.out.println("Name of the fie:");
         String name = scanner.nextLine();
 
@@ -25,5 +26,7 @@ public class RecordsFromAFile {
             System.out.println("Error: " + e.getMessage());
         }
 
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
     }
 }

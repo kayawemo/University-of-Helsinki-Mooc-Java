@@ -9,10 +9,13 @@ public class Printer {
 
     public static void printArrayInStars(int[] array) {
         // Write some code in here
+<<<<<<< HEAD
        String star = "*";
         for (int element:array){
             System.out.println(star.repeat(element));
         }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
     }
 
 }

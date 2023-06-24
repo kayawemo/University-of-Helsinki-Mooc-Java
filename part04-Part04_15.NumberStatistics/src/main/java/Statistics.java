@@ -1,5 +1,6 @@
 
 public class Statistics {
+<<<<<<< HEAD
     
     private int count;
     private int sum;
@@ -30,4 +31,6 @@ public class Statistics {
         }
         return (double) this.sum/this.count;
     }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 }

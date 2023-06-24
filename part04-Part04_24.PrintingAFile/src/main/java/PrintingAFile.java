@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class PrintingAFile {
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         try ( Scanner scanner = new Scanner(Paths.get("data.txt"))) {
 
             // we read the file until all lines have been read
@@ -17,6 +18,8 @@ public class PrintingAFile {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
     }
 }

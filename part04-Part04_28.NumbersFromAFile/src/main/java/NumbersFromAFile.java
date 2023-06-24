@@ -1,11 +1,15 @@
 
 import java.nio.file.Paths;
 import java.util.Scanner;
+<<<<<<< HEAD
 import java.util.ArrayList;
+=======
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
 
 public class NumbersFromAFile {
 
     public static void main(String[] args) {
+<<<<<<< HEAD
         
         
         Scanner scanner = new Scanner(System.in);
@@ -38,6 +42,17 @@ public class NumbersFromAFile {
             
         }
         System.out.println("Numbers: " + count);
+=======
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("File? ");
+        String file = scanner.nextLine();
+        System.out.print("Lower bound? ");
+        int lowerBound = Integer.valueOf(scanner.nextLine());
+        System.out.print("Upper bound? ");
+        int upperBound = Integer.valueOf(scanner.nextLine());
+
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
     }
 
 }

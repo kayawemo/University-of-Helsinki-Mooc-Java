@@ -16,10 +16,25 @@ public class IndexWasNotFound {
         array[6] = 9;
         array[7] = 7;
 
+<<<<<<< HEAD
         System.out.print("Search for? ");
         int searching = Integer.valueOf(scanner.nextLine());
 
         // Implement the search functionality here
+=======
+        System.out.println("Search for? ");
+        int searching = Integer.valueOf(scanner.nextLine());
+        
+        for(int i = 0; i < array.length; i++) {
+            if(array[i] == searching){
+                System.out.println(searching + " is at index " + array[searching]);
+            } else {
+                System.out.println(searching + " was not found.");
+            }
+                
+        }
+        
+>>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
     }
 
 }

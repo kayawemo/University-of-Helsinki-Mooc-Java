@@ -7,15 +7,12 @@ public class MainProgram {
         Scanner scanner = new Scanner(System.in);
         // you can write test code here
         // however, remove all unnecessary code when doing the final parts of the exercise
-<<<<<<< HEAD
-=======
 
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
         // In order for the tests to work, the objects must be created in the
         // correct order in the main program. First the object that tracks the total
         // sum, secondly the object that tracks the sum of even numbers, 
         // and lastly the one that tracks the sum of odd numbers!
-<<<<<<< HEAD
+
         
         Statistics totalSum = new Statistics();
         Statistics evenSum = new Statistics();
@@ -42,7 +39,6 @@ public class MainProgram {
         System.out.println("Sum: " + totalSum.sum());
         System.out.println("Sum of even numbers: " + evenSum.sum());
         System.out.println("Sum of odd numbers: " + oddSum.sum());
-=======
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
+
     }
 }

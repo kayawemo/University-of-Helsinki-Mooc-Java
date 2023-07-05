@@ -7,7 +7,6 @@ public class SportStatistics {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-<<<<<<< HEAD
         System.out.println("File:");
         String file = scan.nextLine();
         System.out.println("Team:");
@@ -60,8 +59,7 @@ public class SportStatistics {
         System.out.println("Games: " + counter);
         System.out.println("Wins: " + won);
         System.out.println("Losses: " + loss);
-=======
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
+
 
     }
 

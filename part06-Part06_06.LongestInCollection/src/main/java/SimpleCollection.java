@@ -18,5 +18,21 @@ public class SimpleCollection {
     public ArrayList<String> getElements() {
         return this.elements;
     }
+    
+    public String longest(){
+        if (this.elements.isEmpty()){
+            return null;
+        }
+        
+        String tallest = this.elements.get(0);
+        
+        for (String ele : elements){
+            if (tallest.length() < ele.length()){
+                tallest = ele;
+            }
+        }
+        
+        return tallest;
+    }
 
 }

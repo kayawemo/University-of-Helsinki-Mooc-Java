@@ -4,6 +4,16 @@ public class Bird {
     private String latinName;
     private int observation;
 
+    public boolean isObserved() {
+        return isObserved;
+    }
+
+    public void setObserved(boolean observed) {
+        isObserved = observed;
+    }
+
+    private boolean isObserved = false;
+
     public int getObservation() {
         return observation;
     }

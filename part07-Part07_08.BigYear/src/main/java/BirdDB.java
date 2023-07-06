@@ -13,26 +13,24 @@ public class BirdDB {
         this.birds.add(bird);
     }
 
-    public void displayAll () {
-        for (Bird bird :birds) System.out.println(bird);
+    public void displayAll() {
+        for (Bird bird : birds) System.out.println(bird);
     }
-
-    public void displayOne (String name) {
-        for (Bird bird :birds) {
-            if (bird.getName().equalsIgnoreCase(name)){
+    public void displayOne(String name) {
+        for (Bird bird : birds) {
+            if (bird.getName().equalsIgnoreCase(name)) {
                 System.out.println(bird);
             }
         }
     }
 
-    public void observeInList(String name) {
+    public boolean observation(String name) {
         for (Bird bird : birds) {
-
-            if(bird.getName().equalsIgnoreCase(name)){
+            if (bird.getName().equals(name)) {
                 bird.observe();
-            } else {
-                System.out.println("Not a bird!");
+                return true;
             }
         }
+        return false;
     }
 }

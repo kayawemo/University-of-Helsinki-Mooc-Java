@@ -4,7 +4,7 @@ public class UserInterface {
 
     private Scanner scanner;
     private BirdDB birds;
-    private Bird bird;
+
 
     public UserInterface(Scanner scanner, BirdDB birds) {
         this.scanner = scanner;
@@ -18,32 +18,44 @@ public class UserInterface {
             System.out.print("?");
             String command = scanner.nextLine();
 
-            if (command.equals("Quit")) {
+            if (command.equalsIgnoreCase("Quit")) {
                 break;
             }
 
-            if (command.equals("Add")) {
+            if (command.equalsIgnoreCase("Add")) {
                 addBird();
             }
 
-            if (command.equals("observation")){
-                System.out.print("Bird? ");
-                String tobeObserved = scanner.nextLine();
-                birds.observeInList(tobeObserved);
+            if (command.equalsIgnoreCase("observation")) {
+                observe();
             }
 
-            if(command.equals("All")) {
+            if (command.equalsIgnoreCase("All")) {
                 birds.displayAll();
             }
 
-            if (command.equals("One")) {
-                System.out.println("Bird? ");
-                String oneName = scanner.nextLine();
-                birds.displayOne(oneName);
+            if (command.equalsIgnoreCase("One")) {
+                printOne();
+
             }
 
         }
 
+    }
+
+    private void printOne() {
+        System.out.println("Bird? ");
+        String oneName = scanner.nextLine();
+        birds.displayOne(oneName);
+    }
+
+    private void observe() {
+        System.out.print("Bird? ");
+        String tobeObserved = scanner.nextLine();
+        Boolean isObserved = birds.observation(tobeObserved);
+        if (!isObserved) {
+            System.out.println("Not a bird!");
+        }
     }
 
     private void addBird() {

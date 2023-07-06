@@ -13,7 +13,7 @@ public class UserInterface {
         Scanner scanner = new Scanner(System.in);
         System.out.print("File to read: ");
         String file = scanner.nextLine();
-        System.out.println();
+        //System.out.println();
 
         ArrayList<String> ingredients = new ArrayList<>();
 
@@ -23,7 +23,7 @@ public class UserInterface {
 
 
             Scanner sc = new Scanner(System.in);
-            System.out.print("Enter command: ");
+            //System.out.print("Enter command: ");
 
 
             String commands = sc.nextLine();

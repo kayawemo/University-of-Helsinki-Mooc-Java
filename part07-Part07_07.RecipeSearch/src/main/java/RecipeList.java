@@ -5,10 +5,12 @@ public class RecipeList {
     private ArrayList<Recipe> recipeList;
 
     public RecipeList() {
+
         this.recipeList = new ArrayList<>();
     }
 
     public void addRecipe(Recipe recipe) {
+
         this.recipeList.add(recipe);
     }
 
@@ -37,5 +39,9 @@ public class RecipeList {
             }
         }
         return null;
+    }
+
+    public void addIngredients(String ingredient) {
+
     }
 }

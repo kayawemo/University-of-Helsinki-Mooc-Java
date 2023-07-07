@@ -55,7 +55,6 @@
         <module name="Part02_02.SquareRootOfSum" />
         <module name="Part01_32.OddOrEven" />
         <module name="Part01_24.SpeedingTicket" />
-        <module name="Part07_04.ReadymadeSortingAlgorithms" />
         <module name="Part04_04.Room" />
         <module name="Part07_07.RecipeSearch" />
         <module name="Part01_30.LargerThanOrEqualTo" />
@@ -150,7 +149,6 @@
         <module name="Part04_25.PrintingASpecifiedFile" />
         <module name="Part01_33.Password" />
         <module name="Part04_24.PrintingAFile" />
-        <module name="Part07_06.GradeStatistics" />
         <module name="Part03_13.AverageOfAList" />
         <module name="Part07_02.LiquidContainers2" />
         <module name="Part05_02.Book" />
@@ -170,7 +168,6 @@
         <module name="Part01_14.BooleanInput" />
         <module name="Part07_03.Sorting" />
         <module name="Part03_29.LastWords" />
-        <module name="Part07_01.LiquidContainers" />
         <module name="Part02_21.InAHoleInTheGround" />
         <module name="Part01_27.Ancient" />
         <module name="Part01_16.SecondsInADay" />

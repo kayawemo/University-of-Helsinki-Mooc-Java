@@ -5,19 +5,16 @@ public class LeapYear {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-<<<<<<< HEAD
-=======
-        
+
         System.out.println("Give a year:");
-        
+
         int year = Integer.valueOf(scan.nextLine());
-        
-        if (((year % 4 == 0) && (year % 100!= 0)) || (year%400 == 0)){
+
+        if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
             System.out.println("The year is a leap year");
-          } else {
+        } else {
             System.out.println("The year is not a leap year");
-           }
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
+        }
 
     }
 }

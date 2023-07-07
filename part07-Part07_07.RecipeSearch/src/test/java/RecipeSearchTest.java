@@ -93,7 +93,7 @@ public class RecipeSearchTest {
         commands += "stop\n";
 
         io.setSysIn(commands);
-        RecipeSearch.main(new String[]{});
+        mainProgram.main(new String[]{});
 
         String print = io.getSysOut();
         for (String expected : expectedPrints) {

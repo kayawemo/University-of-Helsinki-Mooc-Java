@@ -20,7 +20,7 @@ public class GiftTax {
         } else if (value >= 200000 && value <= 1000000) {
             System.out.println("Tax: " + 1.0 * (22100 + (value - 200000) * 0.15));
         } else if (value > 1000000) {
-            System.out.println("Tax: " + 1.0 * (142100 + (value - 100000) * 0.17));
+            System.out.println("Tax: " + 1.0 * (142100 + (value - 1000000) * 0.17));
         }
 
     }

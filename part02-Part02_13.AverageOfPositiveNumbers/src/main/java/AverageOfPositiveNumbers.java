@@ -5,8 +5,7 @@ public class AverageOfPositiveNumbers {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-<<<<<<< HEAD
-=======
+
         
         double numOfNums = 0;
         double sum = 0;
@@ -35,7 +34,7 @@ public class AverageOfPositiveNumbers {
         }
         
         System.out.println(sum/numOfNums);
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
+
 
     }
 }

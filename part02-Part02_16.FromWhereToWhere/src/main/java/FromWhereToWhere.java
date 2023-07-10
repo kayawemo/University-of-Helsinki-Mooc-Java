@@ -10,7 +10,7 @@ public class FromWhereToWhere {
         System.out.println("Where to?");
         int start = Integer.valueOf(scanner.nextLine());
         
-        System.out.println("Where from.650");
+        System.out.println("Where from?");
         int end = Integer.valueOf(scanner.nextLine());
         
         for(int i = start; i <= end; i++) {

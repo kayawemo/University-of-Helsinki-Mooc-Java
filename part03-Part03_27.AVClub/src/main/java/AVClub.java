@@ -7,5 +7,21 @@ public class AVClub {
         Scanner scanner = new Scanner(System.in);
 
 
+        String result = "";
+
+        while(true) {
+            String input = scanner.nextLine();
+            if (input.equals("")) {
+                break;
+            }
+
+            String[] words = input.split(" ");
+            for (String word : words) {
+                if(word.contains("av")) {
+                    System.out.println(word);
+                }
+            }
+        }
+
     }
 }

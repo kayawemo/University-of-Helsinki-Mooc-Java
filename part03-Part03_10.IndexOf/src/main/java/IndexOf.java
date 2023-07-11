@@ -17,19 +17,21 @@ public class IndexOf {
             list.add(input);
         }
 
-        System.out.println("");
+        System.out.println();
 
         // implement here finding the indices of a number
-<<<<<<< HEAD
-    }
-=======
-        
-        System.out.println("Search for?");
+        System.out.print("Search for?");
         int number = Integer.valueOf(scanner.nextLine());
-        
-       if(list.contains(number)){
-                System.out.println(number + " is at index " + list.indexOf(number));
-            } 
+
+//        if (list.contains(number)) {
+//            System.out.println(number + " is at index " + list.indexOf(number));
+//        }
+
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == number) {
+                System.out.println(number + " is at index " + i);
+            }
         }
->>>>>>> 498105c862e600fc03f788af25c3cea9050b6215
+    }
+
 }

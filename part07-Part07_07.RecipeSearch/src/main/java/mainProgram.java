@@ -1,12 +1,14 @@
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class mainProgram {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        RecipeList recipes = new RecipeList();
+        Recipes recipes = new Recipes();
         UserInterface ui = new UserInterface(scan, recipes);
 
-        ui.run();
+        ui.start();
     }
 
 

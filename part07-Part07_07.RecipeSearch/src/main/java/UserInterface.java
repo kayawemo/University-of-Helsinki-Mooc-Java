@@ -1,6 +1,5 @@
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,99 +7,71 @@ import java.util.Scanner;
 public class UserInterface {
 
     private Scanner scanner;
-    private RecipeList recipes;
+    private Recipes recipes;
 
-    public UserInterface(Scanner scanner, RecipeList recipes) {
+    public UserInterface(Scanner scanner, Recipes recipes) {
         this.scanner = scanner;
         this.recipes = recipes;
     }
 
-    public void run() {
-
-        //takes file name form te user.
+    public void start() {
         System.out.print("File to read: ");
-        String file = scanner.nextLine();
-        scanner = new Scanner(System.in);
+        String fileName = scanner.nextLine();
         System.out.println();
 
-        Path filePath = Paths.get(file);
+        printCommands();
+        handleFile(fileName);
 
-        if (!Files.exists(filePath)) {
-            System.out.println("File not found!");
-            return;
-        }
+        while(true) {
+            System.out.print("Enter command: ");
+            String command = scanner.nextLine();
 
-        commandInformation();
-
-        while (true) {
-
-            System.out.print("Enter command:");
-            scanner = new Scanner(System.in);
-            String commands = scanner.nextLine();
-            System.out.println();
-
-            if (commands.equals("stop")) break;
-            if (commands.equals("list")) {
-
-                userInput(file);
+            if (command.equals("stop")) {
+                break;
             }
 
-            if (commands.equals("find name")) {
-                findName();
+            if (command.equals("list")) {
+               recipes.printRecipeBook();
             }
         }
+
+
     }
 
-    private void findName() {
-        System.out.print("Searched word: ");
-        Scanner sci = new Scanner(System.in);
-        String name = sci.nextLine();
-        Recipe searchedRecipe = (recipes.searchRecipeByName(name));
-        System.out.println(searchedRecipe.getName() + ", cooking time: " + searchedRecipe.getCookingTime());
-        System.out.println();
-    }
-
-    private void userInput(String fileName) {
+    private void handleFile(String fileName) {
 
         try {
-            scanner = new Scanner(Paths.get(fileName));
-            while (scanner.hasNextLine()) {
-                String name = scanner.nextLine();
-                int cookingTime = Integer.parseInt(scanner.nextLine());
-                ArrayList<String> ingredients = new ArrayList<>();
+            Scanner fileScanner = new Scanner(Paths.get(fileName));
 
-                while (scanner.hasNextLine()) {
+            while (fileScanner.hasNextLine()) {
+
+                String name = scanner.nextLine();  // reads name from text file.
+                int cookingTime = Integer.valueOf(scanner.nextLine()); // reads cooking time from text file.
+
+                ArrayList<String> ingredients = new ArrayList<>(); // add the ingredient.
+                while (fileScanner.hasNextLine()) {
                     String ingredient = scanner.nextLine();
                     if (ingredient.isEmpty()) {
-                        break; // End of ingredients for this recipe
+                        break;
                     }
-                    recipes.addIngredients(ingredient);
+                    ingredients.add(ingredient);
                 }
 
                 Recipe recipe = new Recipe(name, cookingTime, ingredients);
                 recipes.addRecipe(recipe);
             }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
-    private void commandInformation() {
-        System.out.println("Commands: ");
-        System.out.println("list - lists the recipes");
-        System.out.println("stops - stops the program");
-        System.out.println("find name - searches recipes by name");
-        System.out.println();
-    }
-//    private Recipe searchRecipe(String searched) {
-//        System.out.println("Recipes:");
-//        for (Recipe recipe : recipes) {
-//            if (recipe.getName().contains(searched)) {
-//                return recipe;
-//            }
-//
-//        }
-//        return null;
-//    }
 
+    public void printCommands() {
+
+        System.out.println("Commands: \n list - lists the recipes" +
+                "\n stop - stops the program \n");
+    }
 
 }

@@ -26,11 +26,11 @@ public class Hold {
          int total = 0;
        
         for (Suitcase s : suitcase){
-            total =+ s.totalWeight();
+            total += s.totalWeight();
         }
         
         if (total > this.maxWeight){
-            this.suitcase.remove(total);
+            this.suitcase.remove(suit);
             total = total - suit.totalWeight();
         }
         

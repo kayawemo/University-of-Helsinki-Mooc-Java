@@ -39,7 +39,7 @@ public class UserInterface {
 
            
 
-            if (command.endsWith("move") && amount > 0) {
+            if (command.equals("move") && amount > 0) {
                 if (cont1.contains() > 0) {
                     if (cont1.contains() - amount < 0) {
                         cont2.setNumber(cont1.contains());
@@ -55,7 +55,7 @@ public class UserInterface {
                 }
             }
             
-            if (command.endsWith("remove")) {
+            if (command.equals("remove")) {
 
                 cont2.remove(amount);
 

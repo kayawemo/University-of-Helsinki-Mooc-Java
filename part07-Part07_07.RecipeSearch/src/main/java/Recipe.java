@@ -23,5 +23,9 @@ public class Recipe {
         return ingredients;
     }
 
+    public String toString() {
+        return  this.name + ", cooking time: " + this.cookingTime;
+    }
+
 
 }

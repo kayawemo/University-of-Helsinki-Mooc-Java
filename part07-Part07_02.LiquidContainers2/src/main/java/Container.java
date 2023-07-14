@@ -10,45 +10,41 @@
  */
 public class Container {
 
-    private int number;
+    private int content;
 
     public Container() {
+        this.content = 0;
     }
 
     public int contains() {
-        return this.number;
+        return this.content;
     }
 
     public void setNumber(int number) {
-        this.number = number;
+        this.content = number;
     }
 
     public void add(int amount) {
         if (amount > 0) {
-            this.number += amount;
-            if (this.number > 100) {
-                this.number = 100;
+            this.content += amount;
+            if (this.content > 100) {
+                this.content = 100;
             }
         }
     }
 
     public void remove(int amount) {
-//        if (amount > 0) {
-//            this.number -= amount;
-//            if (this.number < 0) {
-//                this.number = 0;
-//            }
-//        }
-        if (this.number > amount) {
-            this.number -= amount;
-
-        }else if (this.number <= amount){
-            this.number = 0;
+        if (amount > 0) {
+            if (amount <= this.content) {
+                this.content -= amount;
+            }
+        } else if (amount > this.content) {
+            this.content = 0;
         }
     }
 
     public String toString() {
-        return this.number + "/100";
+        return this.content + "/100";
     }
 
 }

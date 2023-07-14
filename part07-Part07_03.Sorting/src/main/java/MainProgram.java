@@ -51,16 +51,22 @@ public class MainProgram {
 
     }
 
+    public static void sort(int[] array) {
+
+        for (int i = 0; i < array.length; i++) {
+            swap(array, i, indexOfSmallestFrom(array, i));
+        }
+
+    }
+
     public static void main(String[] args) {
         // write your test code here
-        int[] numbers = {3, 2, 5, 4, 8};
+        int[] numbers = {8, 3, 7, 9, 1, 2, 4};
 
         System.out.println(Arrays.toString(numbers));
 
-        MainProgram.swap(numbers, 1, 0);
-        System.out.println(Arrays.toString(numbers));
 
-        MainProgram.swap(numbers, 0, 3);
+        MainProgram.sort(numbers);
         System.out.println(Arrays.toString(numbers));
     }
 

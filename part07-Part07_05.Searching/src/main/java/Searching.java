@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -17,7 +16,7 @@ public class Searching {
         System.out.println("Id of the book to search for?");
         int idToSearchFor = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("");
+        System.out.println();
         System.out.println("Searching with linear search:");
         long start = System.currentTimeMillis();
         int linearSearchId = linearSearch(books, idToSearchFor);
@@ -28,10 +27,10 @@ public class Searching {
             System.out.println("Found it! " + books.get(linearSearchId));
         }
 
-        System.out.println("");
+        System.out.println();
 
-        System.out.println("");
-        System.out.println("Seaching with binary search:");
+        System.out.println();
+        System.out.println("Searching with binary search:");
         start = System.currentTimeMillis();
         int binarySearchId = binarySearch(books, idToSearchFor);
         System.out.println("The search took " + (System.currentTimeMillis() - start) + " milliseconds.");
@@ -44,36 +43,50 @@ public class Searching {
     }
 
     public static int linearSearch(ArrayList<Book> books, int searchedId) {
-        
-        for (Book book : books) {
-            if (book.getId() == searchedId)
-                return book.getId();
+        int index = 0;
+        int foundIndex = -1;
+
+        for (Book e : books) {
+
+            if (e.getId() == searchedId) {
+
+                foundIndex = index;
+            }
+
+            index++;
         }
-        return -1;
+
+        return foundIndex;
     }
 
     public static int binarySearch(ArrayList<Book> books, long searchedId) {
-        int begin = 0;
-        int end = books.size() - 1;
-        
-        while(begin < end ){
-            int middleIndex = (begin  + end) / 2;
-            Book midleIndex = books.get(middleIndex);
-            
-            if (searchedId == midleIndex.getId()){
-                return midleIndex.getId();
+        //indexes
+
+        int first = 0;
+        int last = books.size() - 1;
+
+        int foundIndex = -1;
+
+//break statement is very important otherwise it just keeps looping infinitely
+//or you could just use return. I find 1 return statement a bit easier to read
+        while (first <= last) {
+
+            int middle = (first + last) / 2;
+
+            if (books.get(middle).getId() == searchedId) {
+
+                foundIndex = middle;
+                break;
+            } else if (books.get(middle).getId() < searchedId) {
+                first = middle + 1;
+            } else if (books.get(middle).getId() > searchedId) {
+                last = middle - 1;
             }
-            
-            if (searchedId < midleIndex.getId()){
-                end = midleIndex.getId() - 1;
-            }
-            
-            if (searchedId < midleIndex.getId()){
-                end = midleIndex.getId() + 1;
-            }
+
         }
-        
-        return -1;
+
+        return foundIndex;
+
     }
 }
 

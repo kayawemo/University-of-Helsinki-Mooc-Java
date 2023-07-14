@@ -57,7 +57,7 @@ public class Money {
 
         int totalEuros = this.euros - decreaser.euros;
         int totalCents = this.cents - decreaser.cents;
-        System.out.println(totalEuros);
+
 
         if (totalEuros >= 0) {
             if (totalCents < 0) {
@@ -65,7 +65,7 @@ public class Money {
                 totalCents = totalCents + 100;
             }
         } else {
-            totalEuros = 0;
+            totalCents = 0;
             totalEuros = 0;
         }
 
